@@ -18,7 +18,13 @@ public class Two {
 		run31();
 		run32();
 		run33();
-		run34();		
+		run34();
+		run35();
+		run36();
+		run37();
+		run38();
+		run39();
+		run40();
 	}	
 	
 	/*
@@ -78,9 +84,9 @@ public class Two {
 		
 		
 		System.out.println("Задача 23");
-		System.out.println("Введите день");
+		System.out.println("Введите день (номер)");
 		d = scan.nextInt();
-		System.out.println("Введите месяц");
+		System.out.println("Введите месяц (номер)");
 		m = scan.nextInt();
 		scan.close();
 		if (m == 2) {
@@ -458,6 +464,175 @@ public class Two {
 			System.out.println("Возьмите сдачу " + money);
 		}
 		System.out.println("");
+	}
+	
+	/*
+	 * Задача 35. Вычислить число и месяц в невисокосном году по номеру дня
+	 */
+	public static void run35() {
+		int x;
+		
+		int day;
+		
+		x = 53;
+		
+		System.out.println("Задача 35");
+		System.out.print(x + " день в високосном году это: ");
+		if (x < 1) {
+			System.out.println("Отрицательных дней не бывает");
+		} else if (x <= 31) {
+			System.out.println(x + " января");
+		} else if (x <= 59) {
+			day = x - 31;
+			System.out.println(day + " февраля");
+		} else if (x <= 90) {
+			day = x - 59;
+			System.out.println(day + " марта");
+		} else if (x <= 120) {
+			day = x - 90;
+			System.out.println(day + " апреля");
+		} else if (x <= 151) {
+			day = x - 120;
+			System.out.println(day + " мая");
+		} else if (x <= 181) {
+			day = x - 151;
+			System.out.println(day + " июня");
+		} else if (x <= 212) {
+			day = x - 181;
+			System.out.println(day + " июля");
+		} else if (x <= 243) {
+			day = x - 212;
+			System.out.println(day + " августа");
+		} else if (x <= 273) {
+			day = x - 243;
+			System.out.println(day + " сентября");
+		} else if (x <= 304) {
+			day = x - 273;
+			System.out.println(day + " октября");
+		} else if (x <= 334) {
+			day = x - 304;
+			System.out.println(day + " ноября");
+		} else if (x <= 365) {
+			day = x - 304;
+			System.out.println(day + " декабря");
+		} else {
+			System.out.println("Столько дней в високосном году не бывает");
+		}
+		System.out.println("");
+	}
+	
+	/*
+	 * Задача 36. Вычислить значение функции
+	 */
+	public static void run36() {
+		int x;
+		
+		int y;
+		
+		x = 4;
+		
+		System.out.println("Задача 36");
+		System.out.println("x = " + x + ". Тогда результат выражения равен: ");
+		
+		if(x <= 3) {
+			y = x * x - 3 * x + 9;
+		} else {
+			y = 1 / (x * x * x + 6);
+		}
+		
+		System.out.println(y);
+		System.out.println("");
+	}
+	
+	/*
+	 * Задача 37. Вычислить значение функции
+	 */
+	public static void run37() {
+		int x;
+		
+		int y;
+		
+		x = 4;
+		
+		System.out.println("Задача 37");
+		System.out.println("x = " + x + ". Тогда результат выражения равен: ");
+		
+		if(x >= 3) {
+			y = - x * x + 3 * x + 9;
+		} else {
+			y = 1 / (x * x * x - 6);
+		}
+		
+		System.out.println(y);
+		System.out.println("");
+	}
+	
+	/*
+	 * Задача 38. Вычислить значение функции
+	 */
+	public static void run38() {
+		int x;
+		
+		int y;
+		
+		x = 4;
+		
+		System.out.println("Задача 38");
+		System.out.println("x = " + x + ". Тогда результат выражения равен: ");
+		
+		if( (x >= 0) && (x <= 3)) {
+			y = x * x;
+		} else {
+			y = 4;
+		}
+		
+		System.out.println(y);
+		System.out.println("");
+	}
+	
+	/*
+	 * Задача 39. Вычислить значение функции
+	 */
+	public static void run39() {
+		int x;
+		
+		int y;
+		
+		x = 4;
+		
+		System.out.println("Задача 39");
+		System.out.println("x = " + x + ". Тогда результат выражения равен: ");
+		
+		if(x >= 8) {
+			y = - x * x + x - 9;
+		} else {
+			y = 1 / (x * x * x * x - 6);
+		}
+		
+		System.out.println(y);
+		System.out.println("");
+	}
+	
+	/*
+	 * Задача 40. Вычислить значение функции
+	 */
+	public static void run40() {
+		int x;
+		
+		int y;
+		
+		x = 4;
+		
+		System.out.println("Задача 40");
+		System.out.println("x = " + x + ". Тогда результат выражения равен: ");
+		
+		if(x <= 13) {
+			y = - x * x * x + 9;
+		} else {
+			y = - 3 / (x + 1);
+		}
+		
+		System.out.println(y);
 	}
 }
 
