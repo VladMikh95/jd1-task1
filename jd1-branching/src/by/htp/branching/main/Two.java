@@ -3,6 +3,7 @@ package by.htp.branching.main;
 import java.util.Scanner;
 
 public class Two {
+	static Scanner scan = new Scanner(System.in);
 
 	public static void main(String[] args) {
 		run21();
@@ -25,6 +26,7 @@ public class Two {
 		run38();
 		run39();
 		run40();
+		scan.close();
 	}	
 	
 	/*
@@ -34,14 +36,14 @@ public class Two {
 	 *  мальчики!»
 	 */
 	public static void run21() {
+		String s;
 		char a;
-		
-		a = 'M';
 		
 		System.out.println("Задача 21");
 		System.out.println("Кто ты: мальчик или девочка? Введи Д или М");
-		System.out.println(a);
-		if(a == 'M') {
+		s = scan.next();
+		a = s.charAt(0);
+		if(a == 'М') {
 			System.out.println("Мне нравятся мальчики!");
 		} else if(a == 'Д') {
 			System.out.println("Мне нравятся девочки!");
@@ -78,7 +80,6 @@ public class Two {
 	 *   сообщить об этом
 	 */
 	public static void run23() {
-		Scanner scan = new Scanner(System.in);
 		int d;
 		int m;
 		
